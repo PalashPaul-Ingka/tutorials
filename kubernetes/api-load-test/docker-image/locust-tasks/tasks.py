@@ -16,7 +16,7 @@ class ReviewTaskSet(TaskSet):
     @task(999)
     def post_metrics(self):
         param = self.get_param()
-        self.client.get(f"/ugc/reviews/{param['countryCode']}/{param['langCode']}/{param['productId']}" ,name =f"/ugc/reviews/{param['countryCode']}")
+        self.client.get(f"/<path>/{param['param1']}/{param['param2']}/{param['param3']}" ,name =f"/<path>/{param['param1']}")
 
 class UserLocust(HttpLocust):
     task_set = ReviewTaskSet
